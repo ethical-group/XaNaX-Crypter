@@ -1,0 +1,17 @@
+[package]
+name = "xanax-stub"
+version = "6.6.6"
+edition = "2021"
+
+[features]
+console = []
+
+[dependencies]
+rpchandler = { path = "rpchandler" }
+litcrypt = "0.3"
+winapi = {version = "0.3.9", features = ["winuser", "handleapi", "processthreadsapi", "securitybaseapi"]}
+libc = "0.2.66"
+base64 = "0.20.0-alpha.1"
+
+[build-dependencies]
+static_vcruntime = "2.0"

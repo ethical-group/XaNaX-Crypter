@@ -1,0 +1,27 @@
+[workspace]
+members = [
+    #"xanax",
+    "xanax-stub",
+]
+
+[profile.release.xanax]
+lto = "on"
+codegen-units = 1
+strip = true
+opt-level = "z"
+debug = false
+# panic = "abort"
+
+[profile.release.xanax-stub]
+lto = "on"
+codegen-units = 1
+strip = true
+opt-level = "z"
+debug = false
+# panic = "abort"
+
+[profile.dev.xanax-client]
+opt-level = "0"
+
+
+# RUSTFLAGS='-C target-feature=+crt-static' proxychains4  cargo build --package xanax-client --release --target x86_64-unknown-linux-gnu
